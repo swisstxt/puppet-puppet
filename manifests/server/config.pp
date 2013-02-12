@@ -41,6 +41,7 @@ class puppet::server::config inherits puppet::config {
 
     git::repo { 'puppet_repo':
       bare    => true,
+      source  => $puppet::server::git_repo_source,
       target  => $puppet::server::git_repo_path,
       user    => $puppet::server::user,
       require => File[$puppet::server::envs_dir],

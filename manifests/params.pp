@@ -34,6 +34,7 @@ class puppet::params {
   # Dynamic environments config, ignore if the git_repo is 'false'
   # Path to the repository
   $git_repo_path       = "${vardir}/puppet.git"
+  $git_repo_source     = false
   # Where to checkout the branches
   $envs_dir            = "${dir}/environments"
   # Override these if you need your own hooks

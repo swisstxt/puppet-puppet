@@ -11,6 +11,7 @@ class puppet (
   $common_modules_path = $puppet::params::common_modules_path,
   $git_repo            = $puppet::params::git_repo,
   $git_repo_path       = $puppet::params::git_repo_path,
+  $git_repo_source     = $puppet::params::git_repo_source,
   $envs_dir            = $puppet::params::envs_dir,
   $app_root            = $puppet::params::app_root,
   $ssl_dir             = $puppet::params::ssl_dir,
