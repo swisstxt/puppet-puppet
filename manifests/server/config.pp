@@ -19,6 +19,7 @@ class puppet::server::config inherits puppet::config {
   file { "${puppet::server::vardir}/reports":
     ensure => directory,
     owner  => $puppet::server::user,
+    group => root,
   }
 
   if $puppet::server::git_repo {
