@@ -22,17 +22,6 @@ class puppet::server::config inherits puppet::config {
     group => root,
   }
 
-  # deploy hiera config
-  file { "${puppet::server::dir}/hiera.yaml":
-    source => [
-      'puppet:///modules/site_puppet/hiera.yaml',
-      'puppet:///modules/puppet/hiera.yaml'
-    ],
-    owner  => root,
-    group  => puppet,
-    mode   => '0640';
-  }
-
   if $puppet::server::git_repo {
 
     # location where our puppet environments are located
