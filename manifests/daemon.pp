@@ -5,7 +5,8 @@ class puppet::daemon inherits puppet::service {
   }
 
   cron::crond{'puppet':
-    ensure => absent
+    ensure  => absent,
+    command => '',
   }
 
 }
